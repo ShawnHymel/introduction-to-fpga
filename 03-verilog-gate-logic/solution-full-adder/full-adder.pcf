@@ -1,0 +1,16 @@
+# LEDs
+set_io  led_1  99
+set_io  led_2  98
+set_io  led_3  97
+set_io  led_4  96
+set_io  led_5  95
+
+# PMOD I/O
+set_io -pullup yes  pmod_1  78
+set_io -pullup yes  pmod_2  79
+set_io -pullup yes  pmod_3  80
+set_io  pmod_4  81
+set_io  pmod_5  87
+set_io  pmod_6  88
+set_io  pmod_7  90
+set_io  pmod_8  91
