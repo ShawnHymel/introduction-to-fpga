@@ -1,6 +1,6 @@
 # LEDs
-set_io  led_0   99
+set_io              led_0   99
 
 # PMOD I/O
-set_io -pullup yes  pmod_0  78
-set_io -pullup yes  pmod_1  79
+set_io  -pullup yes pmod_0  78
+set_io  -pullup yes pmod_1  79
