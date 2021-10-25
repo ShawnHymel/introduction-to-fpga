@@ -1,0 +1,13 @@
+# -----------------------------------------------------------------------------
+#- Leds example for the iCEstick board
+#- Constraint file (.pcf)
+# -----------------------------------------------------------------------------
+# --  Pinout: https://github.com/Obijuan/open-fpga-verilog-tutorial/blob/master/tutorial/doc/images/icestick_pinout.png
+# --  Guide: https://github.com/Obijuan/open-fpga-verilog-tutorial/blob/master/tutorial/doc/icestickusermanual.pdf
+
+# ------------ User Leds ------------------------------------------------------
+set_io  D1  99
+set_io  D2  98
+set_io  D3  97
+set_io  D4  96
+set_io  D5  95

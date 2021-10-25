@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Mon Aug 29 09:12:21 2016
+[*]
+[dumpfile] "/home/jesus/code/apio-examples/icestick-leds/leds_tb.vcd"
+[dumpfile_mtime] "Mon Aug 29 09:10:49 2016"
+[dumpfile_size] 606
+[savefile] "/home/jesus/code/apio-examples/icestick-leds/leds_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 507 137
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] leds_tb.
+[sst_width] 223
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@28
+leds_tb.UUT.D1
+leds_tb.UUT.D2
+leds_tb.UUT.D3
+leds_tb.UUT.D4
+@29
+leds_tb.UUT.D5
+[pattern_trace] 1
+[pattern_trace] 0
