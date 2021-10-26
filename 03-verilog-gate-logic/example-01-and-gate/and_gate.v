@@ -1,10 +1,10 @@
 // AND gate example
 //
 // Inputs:
-//      pmod_0 - pushbutton
-//      pmod_1 - pushbutton
+//      pmod_0  - pushbutton
+//      pmod_1  - pushbutton
 // Outputs:
-//      led_0 - LED
+//      led_0   - LED
 //
 // LED will turn on if both pushbuttons are pressed (~pmod_0 & ~pmod_1).
 //

@@ -1,3 +1,18 @@
+// Clock-divided counter
+//
+// Inputs:  
+//      clk         - 12 MHz clock
+//      rst_btn     - pushbutton (RESET)
+//      
+// Outputs:
+//      led[3:0]    - LEDs (count from 0x0 to 0xf)
+//
+// LEDs will display a binary number that increments by one each second.
+//
+// Date: October 26, 2021
+// Author: Shawn Hymel
+// License: 0BSD
+
 // Count up each second
 module clock_counter (
 

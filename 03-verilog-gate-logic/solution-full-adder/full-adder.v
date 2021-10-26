@@ -1,10 +1,10 @@
 // Solution to full adder challenge
 //
 // Inputs:
-//      pmod[2:0] - pushbuttons (x3)
+//      pmod[2:0]   - pushbuttons (x3)
 //
 // Outputs:
-//      led[1:0] - LEDs (x2)
+//      led[1:0]    - LEDs (x2)
 //
 // LED 0 turns on if 1 or 3 buttons are pressed. LED 1 turns on if 2 or 3
 // buttons are pressed.

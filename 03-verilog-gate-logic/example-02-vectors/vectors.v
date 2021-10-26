@@ -1,10 +1,10 @@
 // Vector and intermediate (wire) value example
 //
 // Inputs:
-//      pmod[1:0] - pushbuttons (x2)
+//      pmod[1:0]   - pushbuttons (x2)
 //
 // Outputs:
-//      led[2:0] - LEDs (x3)
+//      led[2:0]    - LEDs (x3)
 //
 // LEDs 0 and 1 turn on if pmod[0] button is pressed. LED 2 turns on if pmod[0]
 // and pmod[1] are pressed together.

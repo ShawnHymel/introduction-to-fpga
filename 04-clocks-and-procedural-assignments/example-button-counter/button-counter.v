@@ -1,3 +1,18 @@
+// Button counter
+//
+// Inputs:
+//      pmod[0]     - pushbutton (RESET)
+//      pmod[1]     - pushbutton (CLOCK)
+// Outputs:
+//      led[3:0]    - LEDs (count from 0x0 to 0xf)
+//
+// LEDs will count up in binary on each CLOCK button press. Note: there will
+// be a lot of button bounce, so don't worry if the numbers seem to skip around!
+//
+// Date: October 26, 2021
+// Author: Shawn Hymel
+// License: 0BSD
+
 // Count up on each button press and display on LEDs
 module button_counter (
 
