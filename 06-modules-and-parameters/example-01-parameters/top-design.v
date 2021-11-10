@@ -17,11 +17,11 @@
 module top_design (
 
     // Inputs
-    input               clk,
-    input               rst_btn,
+    input           clk,
+    input           rst_btn,
     
     // Outputs
-    output  reg[1:0]    led
+    output  [1:0]   led         // Not reg element!
 );
 
     // Internal signals

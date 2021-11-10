@@ -5,14 +5,13 @@
 //      MAX_COUNT   - Maximum value of counter
 // 
 // Inputs:
-//      clk         - 
-//      rst_btn     - pushbutton (RESET)
+//      clk         - Input clock
+//      rst         - Reset signal
 // 
 // Outputs:
-//      led[3:0]    - LEDs (count from 0x0 to 0xf)
-//      done_sig    - LED that flashes once when counting is done_sig
+//      out         - Divided clock output
 // 
-// Counter counts to MAX_COUNT (+1 extra clk cycle) and then toggles out.
+// Toggles out line at a divided rate given clk input.
 //
 // Date: November 8, 2021
 // Author: Shawn Hymel

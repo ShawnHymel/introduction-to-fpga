@@ -1,0 +1,6 @@
+# Verilog synthesis with yosys, PnR with nextpnr
+*.dblite
+*.history
+*.asc
+*.bin
+*.json
