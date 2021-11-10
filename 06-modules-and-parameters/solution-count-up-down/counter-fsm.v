@@ -1,13 +1,13 @@
 // Count up on button signal and stop.
 //
 // Parameters:
+//      COUNT_UP    - 1 to count up, 0 to count down
 //      MAX_COUNT   - Maximum number to count to
 // 
 // Inputs:
 //      clk         - Clock input to module
 //      rst         - Reset signal to clear state machine and counter
 //      go          - Go signal to start state machine
-//      up          - 1'b1 to count up, 1'b0 to count down
 // 
 // Outputs:
 //      out[3:0]    - Bus that counts from 0x0 to 0xf or 0xf to 0x0
@@ -20,7 +20,7 @@
 // Author: Shawn Hymel
 // License: 0BSD
 
-// State machine that counts when go signal is sent
+// Mealy state machine that counts when go signal is sent
 module counter_fsm #(
 
     // Parameters
@@ -39,12 +39,11 @@ module counter_fsm #(
 );
 
     // States
-    localparam  STATE_IDLE      = 2'd0;
-    localparam  STATE_COUNTING  = 2'd1;
-    localparam  STATE_DONE      = 2'd2;
+    localparam  STATE_IDLE      = 1'd0;
+    localparam  STATE_COUNTING  = 1'd1;
     
     // Internal storage elements
-    reg [1:0]   state;
+    reg         state;
     
     // State transition logic
     always @ (posedge clk or posedge rst) begin
@@ -59,6 +58,7 @@ module counter_fsm #(
             
                 // Wait for go signal
                 STATE_IDLE: begin
+                    done <= 1'b0;
                     if (go == 1'b1) begin
                         state <= STATE_COUNTING;
                     end
@@ -67,14 +67,13 @@ module counter_fsm #(
                 // Go from counting to done if counting reaches max
                 STATE_COUNTING: begin
                     if (COUNT_UP == 1'b1 && out == MAX_COUNT) begin
-                        state <= STATE_DONE;
+                        done <= 1'b1;
+                        state <= STATE_IDLE;
                     end else if (COUNT_UP == 1'b0 && out == 0) begin
-                        state <= STATE_DONE;
+                        done <= 1'b1;
+                        state <= STATE_IDLE;
                     end
                 end
-                
-                // Spend one clock cycle in done state
-                STATE_DONE: state <= STATE_IDLE;
                 
                 // Go to idle if in unknown state
                 default: state <= STATE_IDLE;
@@ -101,28 +100,14 @@ module counter_fsm #(
                 // Count up or down
                 STATE_COUNTING: begin
                     if (COUNT_UP == 1'b1) begin
-                        out <= out + 1;
+                        if (out != MAX_COUNT) out <= out + 1;
                     end else begin
-                        out <= out - 1;
+                        if (out != 4'h0) out <= out - 1;
                     end
                 end
                 
-                // For anything else, leave counter alone
-                STATE_DONE: begin
-                    out <= 4'd3;
-                end
-                
-                default: out <= 4'd2;
+                default: out <= out;
             endcase
-        end
-    end
-    
-    // Handle done signal output
-    always @ ( * ) begin
-        if (state == STATE_DONE) begin
-            done = 1'b1;
-        end else begin
-            done = 1'b0;
         end
     end
     

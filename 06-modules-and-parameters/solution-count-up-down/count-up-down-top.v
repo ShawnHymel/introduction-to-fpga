@@ -21,8 +21,7 @@ module count_up_down_top (
     input               rst_btn,
     
     // Outputs
-    output  reg [3:0]   led,
-    output              test_led
+    output  reg [3:0]   led
 );
 
     // Internal signals
@@ -39,9 +38,6 @@ module count_up_down_top (
     
     // Invert active-low buttons
     assign rst = ~rst_btn;
-    
-    // %%%TEST%%%
-    assign test_led = up_done;
     
     // Use the reset button to start the endless loop of counters
     always @ (posedge div_clk or posedge rst) begin
@@ -74,30 +70,15 @@ module count_up_down_top (
         end
     end
     
-    // Switch up signal based on go signals (and pulse initial go signal)
-    // always @ (posedge div_clk or posedge rst) begin
-        // if (rst == 1'b1) begin
-            // up <= 1'b1;
-            // go <= 1'b1;
-        // end else begin
-            // if (done == 1'b1) begin
-                // go <= 1'b1;
-                // up <= ~up;
-            // end else begin
-                // go <= 1'b0;
-            // end
-        // end
-    // end
-    
     // Clock divider
-    clock_divider #(.COUNT_WIDTH(24), .MAX_COUNT(3000000 - 1)) div (
+    clock_divider #(.COUNT_WIDTH(24), .MAX_COUNT(1500000 - 1)) div (
         .clk(clk),
         .rst(rst),
         .out(div_clk)
     );
     
     // Counter (up)
-    counter_fsm #(.COUNT_UP(1'b1), .MAX_COUNT(4'hF)) up_counter (
+    counter_fsm #(.COUNT_UP(1), .MAX_COUNT(4'hF)) up_counter (
         .clk(div_clk),
         .rst(rst),
         .go(down_done | init_go),
@@ -106,7 +87,7 @@ module count_up_down_top (
     );
     
     // Counter (down)
-    counter_fsm #(.COUNT_UP(1'b0), .MAX_COUNT(4'hF)) down_counter (
+    counter_fsm #(.COUNT_UP(0), .MAX_COUNT(4'hF)) down_counter (
         .clk(div_clk),
         .rst(rst),
         .go(up_done),
