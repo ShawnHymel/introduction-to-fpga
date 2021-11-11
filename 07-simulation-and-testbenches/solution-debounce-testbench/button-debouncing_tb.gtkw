@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Thu Nov 11 22:58:44 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\07-simulation-and-testbenches\solution-debounce-testbench\button-debouncing_tb.vcd"
+[dumpfile_mtime] "Thu Nov 11 22:56:49 2021"
+[dumpfile_size] 4760913
+[savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\07-simulation-and-testbenches\solution-debounce-testbench\button-debouncing_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-31.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] button_debouncing_tb.
+[sst_width] 211
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+button_debouncing_tb.uut.clk
+button_debouncing_tb.uut.inc_btn
+@29
+button_debouncing_tb.uut.state[1:0]
+@22
+button_debouncing_tb.uut.led[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
