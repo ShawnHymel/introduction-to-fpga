@@ -17,7 +17,7 @@ module clock_divider_tb();
     reg     clk = 0;
     reg     rst = 0;            
 
-    // Simulation time: 2000 * 1 ns = 2 us
+    // Simulation time: 10000 * 1 ns = 10 us
     localparam DURATION = 10000;
     
     // Generate clock signal: 1 / ((2 * 41.67) * 1 ns) = 11,999,040.08 MHz
@@ -32,7 +32,7 @@ module clock_divider_tb();
     end
     
     // Instantiate the unit under test (UUT)
-    clock_divider #(.COUNT_WIDTH(4), .MAX_COUNT(6 - 1)) div_1 (
+    clock_divider #(.COUNT_WIDTH(4), .MAX_COUNT(6 - 1)) uut (
         .clk(clk),
         .rst(rst),
         .out(out)

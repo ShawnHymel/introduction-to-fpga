@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
-[*] Thu Nov 11 19:17:05 2021
+[*] Thu Nov 11 19:42:09 2021
 [*]
 [dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\07-simulation-and-testbenches\example-01-testbench\clk-div_tb.vcd"
-[dumpfile_mtime] "Thu Nov 11 19:08:07 2021"
-[dumpfile_size] 878
+[dumpfile_mtime] "Thu Nov 11 19:40:47 2021"
+[dumpfile_size] 4709
 [savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\07-simulation-and-testbenches\example-01-testbench\clk-div_tb.gtkw"
 [timestart] 0
 [size] 1000 600
 [pos] -1 -1
-*-20.318041 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-22.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] clock_divider_tb.
 [sst_width] 211
 [signals_width] 110
