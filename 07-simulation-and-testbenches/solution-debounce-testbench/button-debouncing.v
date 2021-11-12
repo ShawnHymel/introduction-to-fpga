@@ -1,12 +1,15 @@
 // One possible way to debounce a button press (using a Moore state machine)
+//
+// Parameters:
+//      MAX_CLK_COUNT   - How long to wait (cycles) before sampling button again
 // 
 // Inputs:
-//      clk         - 12 MHz clock
-//      rst_btn     - pushbutton (RESET)
-//      inc_btn     - pushbutton (INCREMENT)
+//      clk             - Input clock
+//      rst_btn         - Pushbutton (RESET)
+//      inc_btn         - Pushbutton (INCREMENT)
 // 
 // Outputs:
-//      led[3:0]    - LEDs (count from 0x0 to 0xf)
+//      led[3:0]        - LEDs (count from 0x0 to 0xf)
 // 
 // One press of the increment button should correspond to one and only one
 // increment of the counter. Use a state machine to identify the edge on the
@@ -18,7 +21,11 @@
 // License: 0BSD
 
 // Use a state machine to debounce the button, which increments a counter
-module debounced_counter (
+module debounced_counter #(
+
+    // Parameters
+    parameter MAX_CLK_COUNT    = 20'd480000 - 1;
+) (
 
     // Inputs
     input               clk,
@@ -28,9 +35,6 @@ module debounced_counter (
     // Outputs
     output  reg [3:0]   led
 );
-
-    // Max counts for wait state (40 ms with 12 MHz clock)
-    parameter MAX_CLK_COUNT    = 20'd480000 - 1;
 
     // States
     localparam STATE_HIGH       = 2'd0;
@@ -103,12 +107,12 @@ module debounced_counter (
     // Run counter if in wait state
     always @ (posedge clk or posedge rst) begin
         if (rst == 1'b1) begin
-            clk_count <= 20'd0;
+            clk_count <= 0;
         end else begin
             if (state == STATE_WAIT) begin
                 clk_count <= clk_count + 1;
             end else begin
-                clk_count <= 20'd0;
+                clk_count <= 0;
             end
         end
     end
