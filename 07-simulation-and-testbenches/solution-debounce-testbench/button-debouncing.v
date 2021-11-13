@@ -24,7 +24,7 @@
 module debounced_counter #(
 
     // Parameters
-    parameter MAX_CLK_COUNT    = 20'd480000 - 1;
+    parameter MAX_CLK_COUNT     = 20'd480000 - 1
 ) (
 
     // Inputs
