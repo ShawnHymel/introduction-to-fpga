@@ -27,7 +27,7 @@ module clock_counter (
     wire rst;
     reg div_clk;
     reg [31:0] count;
-    localparam [31:0] max_count = 6000000;
+    localparam [31:0] max_count = 6000000 - 1;
 
     // Reset is the inverse of the reset button
     assign rst = ~rst_btn;
