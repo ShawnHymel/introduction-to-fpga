@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Mon Nov 15 20:31:41 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\08-memory\example-01-memory\memory_tb.vcd"
+[dumpfile_mtime] "Mon Nov 15 20:31:26 2021"
+[dumpfile_size] 4133
+[savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\08-memory\example-01-memory\memory_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-19.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+memory_tb.clk
+@22
+memory_tb.r_addr[3:0]
+memory_tb.r_data[7:0]
+@28
+memory_tb.r_en
+@22
+memory_tb.w_addr[3:0]
+memory_tb.w_data[7:0]
+@28
+memory_tb.w_en
+[pattern_trace] 1
+[pattern_trace] 0
