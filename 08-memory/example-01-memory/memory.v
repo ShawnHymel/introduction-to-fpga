@@ -4,12 +4,12 @@
 //      clk             - Input clock
 //      w_en            - Write enable
 //      r_en            - Read enable
-//      w_addr[7:0]     - Write address
-//      r_addr[7:0]     - Read address
-//      w_data[31:0]    - Data to be written
+//      w_addr[3:0]     - Write address
+//      r_addr[3:0]     - Read address
+//      w_data[7:0]     - Data to be written
 // 
 // Outputs:
-//      r_data          - Data to be read
+//      r_data[7:0]     - Data to be read
 //
 // Date: November 15, 2021
 // Author: Shawn Hymel
