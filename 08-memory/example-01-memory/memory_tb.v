@@ -50,22 +50,22 @@ module memory_tb();
     
         // Test 1: read from address 0x10 (should be garbage)
         #(2 * 41.67)
-        r_addr = 'h10;
+        r_addr = 'h0f;
         r_en = 1;
         #(2 * 41.67)
         r_addr = 0;
         r_en = 0;
         
-        // Test 2: Write to address 0x10 and read it back
+        // Test 2: Write to address 0x0f and read it back
         #(2 * 41.67)
-        w_addr = 'h10;
+        w_addr = 'h0f;
         w_data = 'hA5;
         w_en = 1;
         #(2 * 41.67)
         w_addr = 0;
         w_data = 0;
         w_en = 0;
-        r_addr = 'h10;
+        r_addr = 'h0f;
         r_en = 1;
         #(2 * 41.67)
         r_addr = 0;
