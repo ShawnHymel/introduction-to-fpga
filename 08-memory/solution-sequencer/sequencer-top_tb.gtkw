@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Tue Nov 16 17:21:28 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\08-memory\solution-sequencer\sequencer-top_tb.vcd"
+[dumpfile_mtime] "Tue Nov 16 17:20:28 2021"
+[dumpfile_size] 25572
+[savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\08-memory\solution-sequencer\sequencer-top_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 143 193
+*-21.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] memory_tb.
+[treeopen] memory_tb.uut.
+[sst_width] 211
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+memory_tb.clk
+@29
+memory_tb.uut.div_clk
+@28
+memory_tb.led[1:0]
+memory_tb.ptn_0_btn
+memory_tb.ptn_1_btn
+memory_tb.rst_btn
+memory_tb.set_btn
+memory_tb.uut.mem.r_addr[2:0]
+memory_tb.uut.mem.r_data[1:0]
+memory_tb.uut.mem.r_en
+memory_tb.uut.mem.w_addr[2:0]
+memory_tb.uut.mem.w_data[1:0]
+memory_tb.uut.mem.w_en
+[pattern_trace] 1
+[pattern_trace] 0

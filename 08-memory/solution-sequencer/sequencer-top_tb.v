@@ -22,8 +22,8 @@ module memory_tb();
     reg             ptn_0_btn = 1;
     reg             ptn_1_btn = 1;
 
-    // Simulation time: 10000 * 1 ns = 10 us
-    localparam DURATION = 10000;
+    // Simulation time: 50000 * 1 ns = 50 us
+    localparam DURATION = 50000;
     
     // Generate clock signal: 1 / ((2 * 41.67) * 1 ns) = 11,999,040.08 MHz
     always begin
@@ -33,6 +33,7 @@ module memory_tb();
     
     // Instantiate the unit under test (UUT)
     sequencer_top #(
+        .DEBOUNCE_COUNTS(2),
         .STEP_COUNTS(10),
         .NUM_STEPS(8)
     ) uut (
@@ -53,6 +54,29 @@ module memory_tb();
         rst_btn = 0;
         #1
         rst_btn = 1;
+        
+        // View a few default steps
+        #(50 * 41.67)
+        
+        // Write 'b11 to the sequencer
+        #(10 * 41.67)
+        ptn_0_btn = 0;
+        ptn_1_btn = 0;
+        set_btn = 0;
+        #(10 * 41.67)
+        ptn_0_btn = 1;
+        ptn_1_btn = 1;
+        set_btn = 1;
+        
+        // Write 'b11 to the sequencer
+        #(10 * 41.67)
+        ptn_0_btn = 0;
+        ptn_1_btn = 0;
+        set_btn = 0;
+        #(10 * 41.67)
+        ptn_0_btn = 1;
+        ptn_1_btn = 1;
+        set_btn = 1;
     end
     
     // Run simulation (output to .vcd file)

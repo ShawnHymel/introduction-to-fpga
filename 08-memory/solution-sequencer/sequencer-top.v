@@ -22,21 +22,22 @@
 module sequencer_top #(
 
     // Parameters
-    parameter   STEP_COUNTS = 6000000 - 1,  // Clock cycles between steps
-    parameter   NUM_STEPS = 8               // Number of steps
+    parameter   DEBOUNCE_COUNTS = 480000 - 1,   // Counts for debounce wait
+    parameter   STEP_COUNTS = 6000000 - 1,      // Clock cycles between steps
+    parameter   NUM_STEPS = 8                   // Number of steps
 
 ) (
 
     // Inputs
-    input           clk,
-    input           rst_btn,
-    input           set_btn,
-    input           ptn_0_btn,
-    input           ptn_1_btn,
+    input               clk,
+    input               rst_btn,
+    input               set_btn,
+    input               ptn_0_btn,
+    input               ptn_1_btn,
     
     // Outputs
-    output  reg [1:0]   led,                // %%% - TODO MAKE NOT REG!!!
-    output  [2:0]   unused_led
+    output  reg [1:0]   led,
+    output      [2:0]   unused_led
 );
     
     // Internal signals
@@ -47,13 +48,14 @@ module sequencer_top #(
     wire            div_clk;
     wire    [1:0]   r_data;
     
-    // Storage elements
+    // Storage elements (initialize some values)
     reg             w_en = 0;
-    reg             r_en = 0;
-    reg     [2:0]   w_addr;
+    reg             r_en = 1'b1;    // Always high!
+    reg     [2:0]   w_addr = 0;
     reg     [2:0]   r_addr;
     reg     [1:0]   w_data;
     reg     [2:0]   step_counter;
+    reg     [2:0]   mem_ptr = 0;
     
     // Turn off unused LEDs
     assign unused_led = 3'b000;
@@ -63,9 +65,6 @@ module sequencer_top #(
     assign set = ~set_btn;
     assign ptn[0] = ~ptn_0_btn;
     assign ptn[1] = ~ptn_1_btn;
-    
-    // Connect memory output to LEDs
-    //assign led = r_data;
     
     // Clock divider
     clock_divider #(
@@ -79,8 +78,8 @@ module sequencer_top #(
     
     // Button debouncer for set buttons
     debouncer #(
-        .COUNT_WIDTH(20),
-        .MAX_CLK_COUNT(480000 - 1)
+        .COUNT_WIDTH(24),
+        .MAX_CLK_COUNT(DEBOUNCE_COUNTS)
     ) set_debouncer (
         .clk(clk),
         .rst(rst),
@@ -106,23 +105,38 @@ module sequencer_top #(
     // Read from memory each divided clock cycle
     always @ (posedge div_clk or posedge rst) begin
         if (rst == 1'b1) begin
+            led <= 0;
+            r_addr <= 0;
             step_counter <= 0;
         end else begin
             r_addr <= step_counter;
             step_counter <= step_counter + 1;
-            r_en <= 1'b1;
+            led <= r_data;
         end
     end
     
-    // TEST: Debouncer on counter
-    // %%% TODO - Set ptn value to mem addr, increment addr pointer
+    // Register write data as soon as debounced set signal goes high
+    always @ (posedge set_d) begin
+        w_data <= ptn;
+    end
+    
+    // Handle writing pattern to memory
     always @ (posedge clk or posedge rst) begin
+    
+        // Reset memory address pointer and write enable signal
         if (rst == 1'b1) begin
-            led <= 0;
+            mem_ptr <= 0;
+            w_en <= 1'b0;
+            
+        // Set write enable high and increment memory pointer
+        end else if (set_d == 1'b1) begin
+            w_addr <= mem_ptr;
+            w_en <= 1'b1;
+            mem_ptr <= mem_ptr + 1;
+        
+        // Reset write enable signal
         end else begin
-            if (set_d == 1'b1) begin
-                led <= led + 1;
-            end
+            w_en <= 1'b0;
         end
     end
     
