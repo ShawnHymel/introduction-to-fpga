@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Mon Dec 06 17:23:51 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\09-pll-and-glitches\solution-gray-code-counter\gray-code-counter_tb.vcd"
+[dumpfile_mtime] "Mon Dec 06 17:23:21 2021"
+[dumpfile_size] 65129
+[savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\09-pll-and-glitches\solution-gray-code-counter\gray-code-counter_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-15.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@29
+glitch_test_tb.rst
+@28
+glitch_test_tb.clk
+@22
+glitch_test_tb.out[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

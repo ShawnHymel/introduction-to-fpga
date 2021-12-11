@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Sat Dec 11 20:21:30 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\apio\fifo_test_03\async-fifo_tb.vcd"
+[dumpfile_mtime] "Sat Dec 11 20:20:07 2021"
+[dumpfile_size] 5748705
+[savefile] "C:\Users\sgmustadio\Documents\apio\fifo_test_03\async-fifo_tb.gtkw"
+[timestart] 0
+[size] 1707 897
+[pos] -1 -1
+*-21.000000 6927000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 259
+@28
+async_fifo_tb.w_clk
+async_fifo_tb.w_rst
+@22
+async_fifo_tb.w_data[7:0]
+@28
+async_fifo_tb.w_en
+@29
+async_fifo_tb.w_full
+@28
+async_fifo_tb.r_clk
+async_fifo_tb.r_rst
+@22
+async_fifo_tb.r_data[7:0]
+@28
+async_fifo_tb.r_en
+async_fifo_tb.r_empty
+[pattern_trace] 1
+[pattern_trace] 0

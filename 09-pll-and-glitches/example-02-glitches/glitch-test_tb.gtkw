@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Mon Dec 06 17:26:08 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\09-pll-and-glitches\example-02-glitches\glitch-test_tb.vcd"
+[dumpfile_mtime] "Mon Dec 06 17:25:24 2021"
+[dumpfile_size] 153010
+[savefile] "C:\Users\sgmustadio\Documents\GitHub\introduction-to-fpga\09-pll-and-glitches\example-02-glitches\glitch-test_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-15.000000 12501 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+glitch_test_tb.rst
+glitch_test_tb.clk
+@c00023
+glitch_test_tb.out[3:0]
+@28
+(0)glitch_test_tb.out[3:0]
+(1)glitch_test_tb.out[3:0]
+(2)glitch_test_tb.out[3:0]
+(3)glitch_test_tb.out[3:0]
+@1401201
+-group_end
+@22
+glitch_test_tb.count[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

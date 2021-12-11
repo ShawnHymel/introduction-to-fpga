@@ -1,0 +1,25 @@
+# Dummy PCF signals to test synthesis
+set_io  r_en        112
+set_io  r_clk       113
+set_io  w_data[0]   114
+set_io  w_data[1]   115
+set_io  w_data[2]   116
+set_io  w_data[3]   117
+set_io  w_data[4]   118
+set_io  w_data[5]   119
+set_io  w_data[6]   44
+set_io  w_data[7]   45
+set_io  w_en        47
+set_io  w_clk       48
+set_io  w_rst       56
+set_io  r_rst       60
+set_io  r_data[0]   61
+set_io  r_data[1]   62
+set_io  r_data[2]   78
+set_io  r_data[3]   79
+set_io  r_data[4]   80
+set_io  r_data[5]   81
+set_io  r_data[6]   87
+set_io  r_data[7]   88
+set_io  r_empty     99
+set_io  w_full      98

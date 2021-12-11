@@ -1,0 +1,5 @@
+# Oscillator
+set_io              ref_clk     21
+
+# PMOD I/O
+set_io              clk         87
