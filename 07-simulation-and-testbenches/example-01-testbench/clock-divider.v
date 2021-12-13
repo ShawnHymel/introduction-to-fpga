@@ -30,7 +30,7 @@ module clock_divider (
 
     // Parameters
     parameter                   COUNT_WIDTH = 24;
-    parameter [COUNT_WIDTH:0]   MAX_COUNT   = 6000000 - 1;
+    parameter [COUNT_WIDTH-1:0]   MAX_COUNT   = 6000000 - 1;
 
     // Internal signals
     wire rst;
