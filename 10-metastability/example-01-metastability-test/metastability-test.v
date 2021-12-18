@@ -9,36 +9,27 @@
 module metastability_test (
 
     // Inputs
-    input               rst_btn,
     input               clk,
     input               sig_in,    
     
     // Outputs
+    output  reg         div_sig = 0,
     output  reg         sig_out
 );
-
-    // Internal signals
-    wire    rst;
     
     // Internal storage elements
-    reg     div_sig;
     reg     pipe_0;
 
-    // Continuous assignment
-    assign rst = ~rst_btn;
     
     // Simple clock divider
-    always @ (posedge sig_in or posedge rst) begin
-        if (rst == 1'b1) begin
-            div_sig <= 0;
-        end else begin
-            div_sig <= ~div_sig;
-        end
+    always @ (posedge sig_in) begin
+        div_sig <= ~div_sig;
     end
 
     // Sample input signal and register on output (added second register
     // to lower chances of metastability).
     always @ (posedge clk) begin
+        // sig_out <= div_sig;
         pipe_0 <= div_sig;
         sig_out <= pipe_0;
     end

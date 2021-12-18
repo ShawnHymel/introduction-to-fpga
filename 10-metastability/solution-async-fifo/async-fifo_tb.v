@@ -26,7 +26,7 @@ module async_fifo_tb();
     localparam  ADDR_SIZE = 4;
     
     // Internal signals
-    wire    [DATA_SIZE-1:0]    r_data;
+    wire    [DATA_SIZE-1:0]     r_data;
     wire                        r_empty;
     wire                        r_full;
     
@@ -34,7 +34,7 @@ module async_fifo_tb();
     reg                         r_en = 0;
     reg                         r_clk = 0;
     reg                         r_rst = 0;
-    reg     [DATA_SIZE-1:0]    w_data;
+    reg     [DATA_SIZE-1:0]     w_data;
     reg                         w_en = 0;
     reg                         w_clk = 0;
     reg                         w_rst = 0;
