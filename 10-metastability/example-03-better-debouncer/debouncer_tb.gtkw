@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Thu Dec 16 22:04:13 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\apio\better-debounce\debouncer_tb.vcd"
+[dumpfile_mtime] "Thu Dec 16 17:47:23 2021"
+[dumpfile_size] 4164257
+[savefile] "C:\Users\sgmustadio\Documents\apio\better-debounce\debouncer_tb.gtkw"
+[timestart] 0
+[size] 1108 600
+[pos] -135 173
+*-31.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] debouncer_tb.
+[sst_width] 211
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+debouncer_tb.clk
+debouncer_tb.rst
+debouncer_tb.inc_btn
+@22
+debouncer_tb.uut.count[8:0]
+@28
+debouncer_tb.out
+[pattern_trace] 1
+[pattern_trace] 0

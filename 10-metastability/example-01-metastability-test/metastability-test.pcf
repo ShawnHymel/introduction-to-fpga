@@ -1,5 +1,5 @@
 # PMOD I/O
-set_io              clk         87
+set_io              clk_in      87
 set_io              sig_in      88
-set_io              div_sig     90
+set_io              clk_out     90
 set_io              sig_out     91

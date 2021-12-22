@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Wed Dec 15 20:37:05 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\apio\pwm_01\pwm_tb.vcd"
+[dumpfile_mtime] "Wed Dec 15 20:32:44 2021"
+[dumpfile_size] 5154
+[savefile] "C:\Users\sgmustadio\Documents\apio\pwm_01\pwm_tb.gtkw"
+[timestart] 3820000
+[size] 1000 600
+[pos] 68 104
+*-19.000000 4542030 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] pwm_tb.
+[sst_width] 211
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+pwm_tb.clk
+pwm_tb.sel
+pwm_tb.wstrb
+@22
+pwm_tb.wdata[31:0]
+pwm_tb.uut.pwm_count[3:0]
+@23
+pwm_tb.uut.count[3:0]
+@800022
+pwm_tb.led[3:0]
+@28
+(0)pwm_tb.led[3:0]
+(1)pwm_tb.led[3:0]
+(2)pwm_tb.led[3:0]
+(3)pwm_tb.led[3:0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.77 (w)1999-2016 BSI
+[*] Thu Dec 16 22:08:09 2021
+[*]
+[dumpfile] "C:\Users\sgmustadio\Documents\apio\better-clock-divider\clock-divider_tb.vcd"
+[dumpfile_mtime] "Thu Dec 16 22:08:03 2021"
+[dumpfile_size] 5375201
+[savefile] "C:\Users\sgmustadio\Documents\apio\better-clock-divider\clock-divider_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-25.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] clock_divider_tb.
+[sst_width] 211
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+clock_divider_tb.clk
+clock_divider_tb.rst
+clock_divider_tb.tick
+@25
+clock_divider_tb.uut.count[6:0]
+[pattern_trace] 1
+[pattern_trace] 0
