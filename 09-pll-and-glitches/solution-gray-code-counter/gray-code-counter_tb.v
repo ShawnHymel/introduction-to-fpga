@@ -81,7 +81,7 @@ module gray_counter_tb();
     initial begin
     
         // Create simulation output file 
-        $dumpfile("gray-counter_tb.vcd");
+        $dumpfile("gray-code-counter_tb.vcd");
         $dumpvars(0, gray_counter_tb);
         
         // Wait for given amount of time for simulation to complete
