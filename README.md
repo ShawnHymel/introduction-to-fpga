@@ -2,11 +2,11 @@
 
 Welcome to the demo code and solutions section of my Introduction to FPGA course! This repository houses all of the example code and solutions that you may use as references when working through the FPGA examples.
 
-![Intro to RTOS course logo](https://raw.githubusercontent.com/ShawnHymel/introduction-to-fpga/main/images/cover.png)
+[![Introduction to FPGA YouTube Series](https://raw.githubusercontent.com/ShawnHymel/introduction-to-fpga/main/images/Intro%20to%20FPGA%20Part%201_Thumbnail.png)](https://www.youtube.com/watch?v=lLg1AgA2Xoo&list=PLEBQazB0HUyT1WmMONxRZn9NmQ_9CIKhb)
 
 This course is hosted on YouTube that you may take for free. All you need to do is watch the videos and complete the challenge issued at the end of each video. I highly recommend you try each challenge before peeking at the solutions here.
 
-The first video in the series is found here: [Introduction to FPGA Part 1 - What is an FPGA? | Digi-Key Electronics](https://youtu.be/lLg1AgA2Xoo)
+The first video in the series is found here: [Introduction to FPGA Part 1 - What is an FPGA? | Digi-Key Electronics](https://www.youtube.com/watch?v=lLg1AgA2Xoo&list=PLEBQazB0HUyT1WmMONxRZn9NmQ_9CIKhb)
 
 Written guides that explain the solutions can be found here: COMING SOON
 
