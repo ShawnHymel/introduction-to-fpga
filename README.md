@@ -6,7 +6,7 @@ Welcome to the demo code and solutions section of my Introduction to FPGA course
 
 This course is hosted on YouTube that you may take for free. All you need to do is watch the videos and complete the challenge issued at the end of each video. I highly recommend you try each challenge before peeking at the solutions here.
 
-The first video in the series is found here: COMING SOON
+The first video in the series is found here: [Introduction to FPGA Part 1 - What is an FPGA? | Digi-Key Electronics](https://youtu.be/lLg1AgA2Xoo)
 
 Written guides that explain the solutions can be found here: COMING SOON
 
